@@ -100,6 +100,7 @@ ofstream wyjscie("szyfrogram.txt");
 string s;
 int klucz;
 
+
 cout << "Klucz: ";
 cin >> klucz;
 
