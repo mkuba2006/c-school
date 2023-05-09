@@ -1,1 +1,1 @@
-# Ours c++ school codes
+# Ours school c++ codes
