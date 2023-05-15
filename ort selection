@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int *tab, n;
+	
+	cout<<"Ile liczb chcesz posortować? ";
+	cin>>n;
+	
+	tab = new int [n];
+	
+	for(int i=0;i<n;i++){
+		cin>>tab[i];
+    }
+	
+	int mn_index;
+    for(int i=0;i<n-1;i++){
+      	mn_index = i;
+        for(int j=i+1;j<n;j++)
+        if(tab[j]<tab[mn_index])
+        mn_index = j;
+
+	    swap(tab[i], tab[mn_index]);
+    }
+	
+	
+
+	
+	for(int i=0;i<n;i++){
+		cout<<tab[i]<<" ";
+    }
+	return 0;
+}
