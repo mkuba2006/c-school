@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-long int szybkie_potegowanie(int podstawa, int potega) {
+long int potega(int n, int p) {
     long int wynik;
-    if (potega == 0) {
+    if (p == 0) {
         return 1;
     } 
-    else if (potega % 2 == 0) {
-        wynik = szybkie_potegowanie(podstawa, potega / 2);
+    else if (p % 2 == 0) {
+        wynik = potega(n, p / 2);
         return wynik * wynik;
     } 
     else {
-        wynik = szybkie_potegowanie(podstawa, (potega - 1) / 2);
-        return podstawa * wynik * wynik;
+        wynik = potega(n, (p - 1) / 2);
+        return n * wynik * wynik;
     }
 }
 
 int main() {
-    int podstawa, potega;
+    int n, p;
     cout << "Podaj podstawę: ";
-    cin >> podstawa;
+    cin >> n;
     cout << "Podaj potęgę: ";
-    cin >> potega;
-    int wynik = szybkie_potegowanie(podstawa, potega);
+    cin >> p;
+    int wynik = potega(n, p);
     cout<< wynik<<endl;
 
     return 0;
