@@ -2,13 +2,10 @@
 using namespace std;
 
 void podział(int liczba){
-    if(liczba<10){
-        cout<<liczba<<endl;
+    if(liczba >= 10){
+        podział(liczba / 10);
     }
-    else{
-        cout<<liczba%10<<endl;
-        podział(liczba/10);
-    }
+    cout << liczba % 10 << endl;
 }
 
 int main() {
