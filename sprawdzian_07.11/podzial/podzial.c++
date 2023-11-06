@@ -8,6 +8,10 @@ void podział(int liczba){
     else{
         cout<<liczba%10<<endl;
         podział(liczba/10);
+
+
+        //podział(liczba/10);
+        //cout<<liczba%10<<endl;
     }
 }
 
